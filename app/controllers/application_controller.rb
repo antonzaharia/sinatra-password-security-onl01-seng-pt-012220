@@ -30,11 +30,9 @@ class ApplicationController < Sinatra::Base
 		erb :login
 	end
 
-	post "/login" do
-    post "/login" do
-  user = User.find_by(:username => params[:username])
-end
-	end
+  post "/login" do
+    user = User.find_by(:username => params[:username])
+  end
 
 	get "/success" do
 		if logged_in?
