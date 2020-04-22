@@ -37,7 +37,6 @@ class ApplicationController < Sinatra::Base
       session[:user_id] = user.id
       erb :success
     else
-      binding.pry
       erb :failure
     end
   end
